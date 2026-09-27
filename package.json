@@ -1,0 +1,36 @@
+{
+  "name": "wpp-tool",
+  "version": "1.0.0",
+  "description": "Read and send WhatsApp messages from the CLI using your own linked WhatsApp Web session. Each command opens a headless WhatsApp Web, does one thing, and closes it.",
+  "keywords": [
+    "whatsapp",
+    "whatsapp-web",
+    "cli",
+    "ai-agents",
+    "automation",
+    "whatsapp-web.js"
+  ],
+  "license": "MIT",
+  "author": "Augusto Claro",
+  "homepage": "https://github.com/ohmaseclaro/wpp-tool#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohmaseclaro/wpp-tool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ohmaseclaro/wpp-tool/issues"
+  },
+  "scripts": {
+    "login": "node capture-auth.js",
+    "check": "node check-auth.js",
+    "wpp": "node wpp.js",
+    "test": "node selftest.js",
+    "postinstall": "node scripts/patch-wwebjs.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "whatsapp-web.js": "git+https://github.com/wwebjs/whatsapp-web.js.git#58ddf1561cd783d6a548fa812eb70a05944604b4"
+  }
+}
